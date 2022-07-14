@@ -81,13 +81,14 @@ def Question5():
       res[i] = 1
   sorted_values = sort(list(res.values()))
   new_dict = {}
-  # print(sorted_values)
-  for i in sorted_keys[0:5]:
-    new_dict[i] = res[i]
+  for i in sorted_values[::-1][0:5]:
+    keys = [k for k, v in res.items() if v == i]
+    for i in keys:
+      new_dict[i] = res[i]
   
   # print(f'The number of occurrences of top 5 letters are : \n {new_dict}')
 
-  return sorted_values[::-1][0:5]
+  return list(new_dict.values())
 
 def Question7():
   a =  [52,51,61,71,56] #Given in que
