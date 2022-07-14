@@ -15,10 +15,8 @@ chest = {
 sorted_chest = {}
 
 
-# Question Number (1):
-
 def sort(array):
-    """Sort the array by using quicksort."""
+    """Sorting the array by using quicksort Algorithm."""
 
     less = []
     equal = []
@@ -55,7 +53,9 @@ def Question2():
 
 def Question3():
   required_keys = Question2()
-  return " ".join(sorted_chest[i] for i in required_keys)
+  question3_result = " ".join(sorted_chest[i] for i in required_keys)
+  # print(f"The answer of Question 3: {question3_result}")
+  return question3_result
 
 def Question4():
   sentence = Question3()
@@ -64,8 +64,9 @@ def Question4():
   for i in spl:
     lists.append(i[0])
     lists.append(i[-1])
-  # print("".join(map(str,lists)))
-  return "".join(map(str,lists))
+  question4_result = "".join(map(str,lists))
+  # print(f"The answer of Question 4: {question4_result}")
+  return question4_result
     
 def Question5():
   string = Question4()
@@ -91,18 +92,18 @@ def Question5():
   return list(new_dict.values())
 
 def Question7():
-  a =  [52,51,61,71,56] #Given in que
+  a =  [52,51,61,71,56] #Given in Question num 6
   b = Question5()
   c=[]
   for x in range(0,5):
       c.append(a[x]+b[x])
-  
+  # print(f"The answer of Question 7 is: {c}")
   return c
 
 def Question8():
   array = Question7()
-  for i in array:
-    print(chr(i))
+  final_result = "".join([chr(i) for i in array])
+  print(f'The final result is: `{final_result}`')
 
 Question1()
 Question2()
@@ -111,6 +112,3 @@ Question4()
 Question5()
 Question7()
 Question8()
-
-# print(sorted_chest)
-
